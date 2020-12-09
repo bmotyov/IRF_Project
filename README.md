@@ -1,2 +1,4 @@
-# IRF_Project
+# IRF Project - Leltározó alkalmazás létrehozása
 Év végi beadandó project feladat
+
+
