@@ -1,6 +1,6 @@
 ﻿namespace IRF_Project
 {
-    partial class Form1
+    partial class From1
     {
         /// <summary>
         /// Required designer variable.
@@ -29,99 +29,119 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sorszamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.leltariszamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mACDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.beszeveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gyartoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(From1));
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.főoldalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.szerkesztőFelületToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.leltárElemekKivezetéseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.leltárElemekHozzáadásaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.excelExportálásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hELPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.keresőToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eszkozokBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eszkozokBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // menuStrip1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sorszamDataGridViewTextBoxColumn,
-            this.leltariszamDataGridViewTextBoxColumn,
-            this.tipusDataGridViewTextBoxColumn,
-            this.mACDataGridViewTextBoxColumn,
-            this.beszeveDataGridViewTextBoxColumn,
-            this.gyartoDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.eszkozokBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(649, 440);
-            this.dataGridView1.TabIndex = 0;
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.főoldalToolStripMenuItem,
+            this.keresőToolStripMenuItem,
+            this.szerkesztőFelületToolStripMenuItem,
+            this.excelExportálásToolStripMenuItem,
+            this.hELPToolStripMenuItem});
+            this.menuStrip1.Name = "menuStrip1";
             // 
-            // sorszamDataGridViewTextBoxColumn
+            // főoldalToolStripMenuItem
             // 
-            this.sorszamDataGridViewTextBoxColumn.DataPropertyName = "Sorszam";
-            this.sorszamDataGridViewTextBoxColumn.HeaderText = "Sorszam";
-            this.sorszamDataGridViewTextBoxColumn.Name = "sorszamDataGridViewTextBoxColumn";
+            this.főoldalToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.főoldalToolStripMenuItem.Name = "főoldalToolStripMenuItem";
+            resources.ApplyResources(this.főoldalToolStripMenuItem, "főoldalToolStripMenuItem");
+            this.főoldalToolStripMenuItem.Click += new System.EventHandler(this.főoldalToolStripMenuItem_Click);
             // 
-            // leltariszamDataGridViewTextBoxColumn
+            // szerkesztőFelületToolStripMenuItem
             // 
-            this.leltariszamDataGridViewTextBoxColumn.DataPropertyName = "Leltari_szam";
-            this.leltariszamDataGridViewTextBoxColumn.HeaderText = "Leltari_szam";
-            this.leltariszamDataGridViewTextBoxColumn.Name = "leltariszamDataGridViewTextBoxColumn";
+            this.szerkesztőFelületToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.leltárElemekKivezetéseToolStripMenuItem,
+            this.leltárElemekHozzáadásaToolStripMenuItem});
+            this.szerkesztőFelületToolStripMenuItem.Name = "szerkesztőFelületToolStripMenuItem";
+            resources.ApplyResources(this.szerkesztőFelületToolStripMenuItem, "szerkesztőFelületToolStripMenuItem");
             // 
-            // tipusDataGridViewTextBoxColumn
+            // leltárElemekKivezetéseToolStripMenuItem
             // 
-            this.tipusDataGridViewTextBoxColumn.DataPropertyName = "Tipus";
-            this.tipusDataGridViewTextBoxColumn.HeaderText = "Tipus";
-            this.tipusDataGridViewTextBoxColumn.Name = "tipusDataGridViewTextBoxColumn";
+            this.leltárElemekKivezetéseToolStripMenuItem.Name = "leltárElemekKivezetéseToolStripMenuItem";
+            resources.ApplyResources(this.leltárElemekKivezetéseToolStripMenuItem, "leltárElemekKivezetéseToolStripMenuItem");
             // 
-            // mACDataGridViewTextBoxColumn
+            // leltárElemekHozzáadásaToolStripMenuItem
             // 
-            this.mACDataGridViewTextBoxColumn.DataPropertyName = "MAC";
-            this.mACDataGridViewTextBoxColumn.HeaderText = "MAC";
-            this.mACDataGridViewTextBoxColumn.Name = "mACDataGridViewTextBoxColumn";
+            this.leltárElemekHozzáadásaToolStripMenuItem.Name = "leltárElemekHozzáadásaToolStripMenuItem";
+            resources.ApplyResources(this.leltárElemekHozzáadásaToolStripMenuItem, "leltárElemekHozzáadásaToolStripMenuItem");
+            this.leltárElemekHozzáadásaToolStripMenuItem.Click += new System.EventHandler(this.leltárElemekHozzáadásaToolStripMenuItem_Click);
             // 
-            // beszeveDataGridViewTextBoxColumn
+            // excelExportálásToolStripMenuItem
             // 
-            this.beszeveDataGridViewTextBoxColumn.DataPropertyName = "Besz_eve";
-            this.beszeveDataGridViewTextBoxColumn.HeaderText = "Besz_eve";
-            this.beszeveDataGridViewTextBoxColumn.Name = "beszeveDataGridViewTextBoxColumn";
+            this.excelExportálásToolStripMenuItem.Name = "excelExportálásToolStripMenuItem";
+            resources.ApplyResources(this.excelExportálásToolStripMenuItem, "excelExportálásToolStripMenuItem");
             // 
-            // gyartoDataGridViewTextBoxColumn
+            // hELPToolStripMenuItem
             // 
-            this.gyartoDataGridViewTextBoxColumn.DataPropertyName = "Gyarto";
-            this.gyartoDataGridViewTextBoxColumn.HeaderText = "Gyarto";
-            this.gyartoDataGridViewTextBoxColumn.Name = "gyartoDataGridViewTextBoxColumn";
+            this.hELPToolStripMenuItem.Name = "hELPToolStripMenuItem";
+            resources.ApplyResources(this.hELPToolStripMenuItem, "hELPToolStripMenuItem");
+            // 
+            // panel1
+            // 
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // keresőToolStripMenuItem
+            // 
+            this.keresőToolStripMenuItem.Name = "keresőToolStripMenuItem";
+            resources.ApplyResources(this.keresőToolStripMenuItem, "keresőToolStripMenuItem");
+            this.keresőToolStripMenuItem.Click += new System.EventHandler(this.keresőToolStripMenuItem_Click);
             // 
             // eszkozokBindingSource
             // 
             this.eszkozokBindingSource.DataSource = typeof(IRF_Project.Eszkozok);
             // 
-            // Form1
+            // From1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 464);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.panel1);
+            this.Name = "From1";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eszkozokBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sorszamDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn leltariszamDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mACDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn beszeveDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gyartoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource eszkozokBindingSource;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem főoldalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem szerkesztőFelületToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem leltárElemekKivezetéseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem leltárElemekHozzáadásaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem excelExportálásToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hELPToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem keresőToolStripMenuItem;
     }
 }
 
