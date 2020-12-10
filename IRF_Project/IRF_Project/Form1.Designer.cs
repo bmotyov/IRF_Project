@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(From1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.főoldalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.keresőToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.szerkesztőFelületToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.leltárElemekKivezetéseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.leltárElemekHozzáadásaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,7 +40,6 @@
             this.hELPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.keresőToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eszkozokBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eszkozokBindingSource)).BeginInit();
@@ -65,6 +65,12 @@
             resources.ApplyResources(this.főoldalToolStripMenuItem, "főoldalToolStripMenuItem");
             this.főoldalToolStripMenuItem.Click += new System.EventHandler(this.főoldalToolStripMenuItem_Click);
             // 
+            // keresőToolStripMenuItem
+            // 
+            this.keresőToolStripMenuItem.Name = "keresőToolStripMenuItem";
+            resources.ApplyResources(this.keresőToolStripMenuItem, "keresőToolStripMenuItem");
+            this.keresőToolStripMenuItem.Click += new System.EventHandler(this.keresőToolStripMenuItem_Click);
+            // 
             // szerkesztőFelületToolStripMenuItem
             // 
             this.szerkesztőFelületToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -82,12 +88,12 @@
             // 
             this.leltárElemekHozzáadásaToolStripMenuItem.Name = "leltárElemekHozzáadásaToolStripMenuItem";
             resources.ApplyResources(this.leltárElemekHozzáadásaToolStripMenuItem, "leltárElemekHozzáadásaToolStripMenuItem");
-            this.leltárElemekHozzáadásaToolStripMenuItem.Click += new System.EventHandler(this.leltárElemekHozzáadásaToolStripMenuItem_Click);
             // 
             // excelExportálásToolStripMenuItem
             // 
             this.excelExportálásToolStripMenuItem.Name = "excelExportálásToolStripMenuItem";
             resources.ApplyResources(this.excelExportálásToolStripMenuItem, "excelExportálásToolStripMenuItem");
+            this.excelExportálásToolStripMenuItem.Click += new System.EventHandler(this.excelExportálásToolStripMenuItem_Click);
             // 
             // hELPToolStripMenuItem
             // 
@@ -103,12 +109,6 @@
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            // 
-            // keresőToolStripMenuItem
-            // 
-            this.keresőToolStripMenuItem.Name = "keresőToolStripMenuItem";
-            resources.ApplyResources(this.keresőToolStripMenuItem, "keresőToolStripMenuItem");
-            this.keresőToolStripMenuItem.Click += new System.EventHandler(this.keresőToolStripMenuItem_Click);
             // 
             // eszkozokBindingSource
             // 

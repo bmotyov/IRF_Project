@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace IRF_Project
 {
-    public partial class fooldal_uc : UserControl
+    public partial class Fooldal_uc : UserControl
     {
-        public fooldal_uc()
+        public Fooldal_uc()
         {
             InitializeComponent();
         }

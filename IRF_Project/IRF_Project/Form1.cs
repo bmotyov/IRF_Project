@@ -21,18 +21,11 @@ namespace IRF_Project
             MaximizeBox = false;
         }
 
-        private void leltárElemekHozzáadásaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form2 f2 = new Form2();
-            panel1.Controls.Clear();
-            f2.Show();
-
-        }
-
+        
         private void főoldalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
-            fooldal_uc uc = new fooldal_uc();
+            Excel_uc uc = new Excel_uc();
             this.Text = "Főoldal";
             panel1.Controls.Add(uc);
         }
@@ -42,6 +35,14 @@ namespace IRF_Project
             panel1.Controls.Clear();
             kereso_uc uc = new kereso_uc();
             this.Text = "Kereső felület";
+            panel1.Controls.Add(uc);
+        }
+
+        private void excelExportálásToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Excel_uc uc = new Excel_uc();
+            panel1.Controls.Clear();
+            this.Text = "Excel Export";
             panel1.Controls.Add(uc);
         }
     }

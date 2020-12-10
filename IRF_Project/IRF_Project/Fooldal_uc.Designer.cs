@@ -1,6 +1,6 @@
 ﻿namespace IRF_Project
 {
-    partial class fooldal_uc
+    partial class Fooldal_uc
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,11 +30,11 @@
         {
             this.SuspendLayout();
             // 
-            // fooldal_uc
+            // UserControl3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "fooldal_uc";
+            this.Name = "UserControl3";
             this.Size = new System.Drawing.Size(750, 300);
             this.ResumeLayout(false);
 

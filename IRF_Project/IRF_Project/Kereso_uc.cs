@@ -27,7 +27,7 @@ namespace IRF_Project
 
         private void Listbox_feltoltes()
         {    
-            List<string> gyarto = new List<string>() { "Összes", "HP", "Dell", "Cisco", "Lenovo" };
+            List<string> gyarto = new List<string>() {"HP", "Dell", "Cisco", "Lenovo" };
             listBox_gyarto.DataSource = gyarto.ToList();           
 
         }
