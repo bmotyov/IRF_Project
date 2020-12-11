@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\TipsuokEnum.cs" />
+    <Compile Include="Entities\Valogatott.cs" />
     <Compile Include="Eszkozok.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Reflection;
+using IRF_Project.Entities;
 
 namespace IRF_Project
 {
@@ -16,7 +17,7 @@ namespace IRF_Project
     {
         LeltarEntities context = new LeltarEntities();
         List<Eszkozok> Eszkozok;
-        List<Eszkozok> Valogatott = new List<Eszkozok>();        
+        List<Valogatott> Valogatott = new List<Valogatott>();        
 
         //Exceles rész kezdete
         Excel.Application xlApp; // A Microsoft Excel alkalmazás
@@ -45,13 +46,12 @@ namespace IRF_Project
                 {
                     if (esz.Tipus == elemek[i] && numericUpDown1.Value <= esz.Besz_eve && esz.Besz_eve <= numericUpDown2.Value )
                     {
-                        Eszkozok uj = new Eszkozok();
-                        uj.Sorszam = esz.Sorszam;
-                        uj.Leltari_szam = esz.Leltari_szam;
-                        uj.Tipus = esz.Tipus;
-                        uj.MAC = esz.MAC;
-                        uj.Besz_eve = esz.Besz_eve;
-                        uj.Gyarto = esz.Gyarto;
+                        Valogatott uj = new Valogatott();                        
+                        uj.leltari_szam = esz.Leltari_szam;
+                        uj.tipus = esz.Tipus;
+                        uj.mac = esz.MAC;
+                        uj.besz_eve = esz.Besz_eve;
+                        uj.gyarto = esz.Gyarto;
 
                         Valogatott.Add(uj);
                     }
@@ -131,8 +131,7 @@ namespace IRF_Project
         {
             
             string [] headers = new string[]
-            {
-                "Sorszam",
+            {                
                 "Leltari szam",
                 "Tipus",
                 "MAC cim",
@@ -145,17 +144,16 @@ namespace IRF_Project
                 xlSheet.Cells[1, i + 1] = headers[i];
             }
 
-            object[,] values = new object[Eszkozok.Count, headers.Length];
+            object[,] values = new object[Valogatott.Count, headers.Length];
 
             int counter = 0;
             foreach (var e in Valogatott)
             {
-                values[counter, 0] = e.Sorszam;
-                values[counter, 1] = e.Leltari_szam;
-                values[counter, 2] = e.Tipus;
-                values[counter, 3] = e.MAC;
-                values[counter, 4] = e.Besz_eve;
-                values[counter, 5] = e.Gyarto;
+                values[counter, 0] = e.leltari_szam;
+                values[counter, 1] = e.tipus;
+                values[counter, 2] = e.mac;
+                values[counter, 3] = e.besz_eve;
+                values[counter, 4] = e.gyarto;
                 counter++;
             }
 
@@ -164,13 +162,25 @@ namespace IRF_Project
             GetCell(1 + values.GetLength(0), values.GetLength(1))).Value2 = values;
 
             Excel.Range headerRange = xlSheet.get_Range(GetCell(1, 1), GetCell(1, headers.Length));
+            Excel.Range dataRange = xlSheet.get_Range(GetCell(2, 1), GetCell(counter + 2,headers.Length));
             headerRange.Font.Bold = true;
             headerRange.VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
             headerRange.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-            headerRange.EntireColumn.AutoFit();
-            headerRange.RowHeight = 40;
-            headerRange.Interior.Color = Color.LightBlue;
-            headerRange.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThick);
+            dataRange.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+            headerRange.ColumnWidth = 20; 
+            //headerRange.EntireColumn.AutoFit();            
+            headerRange.Interior.Color = Color.Gray;
+            headerRange.Font.Color = Color.White;
+            headerRange.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThin);
+
+            for (int i = 1; i < counter+2; i++)
+            {
+                if (i%2 == 0)
+                {
+                    Excel.Range parosRange = xlSheet.get_Range(GetCell(i, 1), GetCell(i, headers.Length));
+                    parosRange.Interior.Color = Color.LightGray;
+                }                
+            }
 
             //FormTable();
         }

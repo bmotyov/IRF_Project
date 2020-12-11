@@ -33,13 +33,6 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sorszamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.leltariszamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mACDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.beszeveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gyartoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eszkozokBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -49,10 +42,16 @@
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.eszkozokBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.leltariszamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mACDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.beszeveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gyartoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eszkozokBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eszkozokBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -98,7 +97,6 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sorszamDataGridViewTextBoxColumn,
             this.leltariszamDataGridViewTextBoxColumn,
             this.tipusDataGridViewTextBoxColumn,
             this.mACDataGridViewTextBoxColumn,
@@ -110,46 +108,6 @@
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.Size = new System.Drawing.Size(540, 288);
             this.dataGridView1.TabIndex = 30;
-            // 
-            // sorszamDataGridViewTextBoxColumn
-            // 
-            this.sorszamDataGridViewTextBoxColumn.DataPropertyName = "Sorszam";
-            this.sorszamDataGridViewTextBoxColumn.HeaderText = "Sorszam";
-            this.sorszamDataGridViewTextBoxColumn.Name = "sorszamDataGridViewTextBoxColumn";
-            // 
-            // leltariszamDataGridViewTextBoxColumn
-            // 
-            this.leltariszamDataGridViewTextBoxColumn.DataPropertyName = "Leltari_szam";
-            this.leltariszamDataGridViewTextBoxColumn.HeaderText = "Leltari_szam";
-            this.leltariszamDataGridViewTextBoxColumn.Name = "leltariszamDataGridViewTextBoxColumn";
-            // 
-            // tipusDataGridViewTextBoxColumn
-            // 
-            this.tipusDataGridViewTextBoxColumn.DataPropertyName = "Tipus";
-            this.tipusDataGridViewTextBoxColumn.HeaderText = "Tipus";
-            this.tipusDataGridViewTextBoxColumn.Name = "tipusDataGridViewTextBoxColumn";
-            // 
-            // mACDataGridViewTextBoxColumn
-            // 
-            this.mACDataGridViewTextBoxColumn.DataPropertyName = "MAC";
-            this.mACDataGridViewTextBoxColumn.HeaderText = "MAC";
-            this.mACDataGridViewTextBoxColumn.Name = "mACDataGridViewTextBoxColumn";
-            // 
-            // beszeveDataGridViewTextBoxColumn
-            // 
-            this.beszeveDataGridViewTextBoxColumn.DataPropertyName = "Besz_eve";
-            this.beszeveDataGridViewTextBoxColumn.HeaderText = "Besz_eve";
-            this.beszeveDataGridViewTextBoxColumn.Name = "beszeveDataGridViewTextBoxColumn";
-            // 
-            // gyartoDataGridViewTextBoxColumn
-            // 
-            this.gyartoDataGridViewTextBoxColumn.DataPropertyName = "Gyarto";
-            this.gyartoDataGridViewTextBoxColumn.HeaderText = "Gyarto";
-            this.gyartoDataGridViewTextBoxColumn.Name = "gyartoDataGridViewTextBoxColumn";
-            // 
-            // eszkozokBindingSource
-            // 
-            this.eszkozokBindingSource.DataSource = typeof(IRF_Project.Eszkozok);
             // 
             // numericUpDown2
             // 
@@ -260,6 +218,40 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // eszkozokBindingSource
+            // 
+            this.eszkozokBindingSource.DataSource = typeof(IRF_Project.Eszkozok);
+            // 
+            // leltariszamDataGridViewTextBoxColumn
+            // 
+            this.leltariszamDataGridViewTextBoxColumn.DataPropertyName = "Leltari_szam";
+            this.leltariszamDataGridViewTextBoxColumn.HeaderText = "Leltari_szam";
+            this.leltariszamDataGridViewTextBoxColumn.Name = "leltariszamDataGridViewTextBoxColumn";
+            // 
+            // tipusDataGridViewTextBoxColumn
+            // 
+            this.tipusDataGridViewTextBoxColumn.DataPropertyName = "Tipus";
+            this.tipusDataGridViewTextBoxColumn.HeaderText = "Tipus";
+            this.tipusDataGridViewTextBoxColumn.Name = "tipusDataGridViewTextBoxColumn";
+            // 
+            // mACDataGridViewTextBoxColumn
+            // 
+            this.mACDataGridViewTextBoxColumn.DataPropertyName = "MAC";
+            this.mACDataGridViewTextBoxColumn.HeaderText = "MAC";
+            this.mACDataGridViewTextBoxColumn.Name = "mACDataGridViewTextBoxColumn";
+            // 
+            // beszeveDataGridViewTextBoxColumn
+            // 
+            this.beszeveDataGridViewTextBoxColumn.DataPropertyName = "Besz_eve";
+            this.beszeveDataGridViewTextBoxColumn.HeaderText = "Besz_eve";
+            this.beszeveDataGridViewTextBoxColumn.Name = "beszeveDataGridViewTextBoxColumn";
+            // 
+            // gyartoDataGridViewTextBoxColumn
+            // 
+            this.gyartoDataGridViewTextBoxColumn.DataPropertyName = "Gyarto";
+            this.gyartoDataGridViewTextBoxColumn.HeaderText = "Gyarto";
+            this.gyartoDataGridViewTextBoxColumn.Name = "gyartoDataGridViewTextBoxColumn";
+            // 
             // Excel_uc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,8 +273,8 @@
             this.Size = new System.Drawing.Size(750, 300);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eszkozokBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eszkozokBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,12 +295,11 @@
         public System.Windows.Forms.CheckBox checkBox3;
         public System.Windows.Forms.CheckBox checkBox4;
         public System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sorszamDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource eszkozokBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn leltariszamDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mACDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn beszeveDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn gyartoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource eszkozokBindingSource;
     }
 }
