@@ -99,6 +99,7 @@
             // 
             this.hELPToolStripMenuItem.Name = "hELPToolStripMenuItem";
             resources.ApplyResources(this.hELPToolStripMenuItem, "hELPToolStripMenuItem");
+            this.hELPToolStripMenuItem.Click += new System.EventHandler(this.hELPToolStripMenuItem_Click);
             // 
             // panel1
             // 

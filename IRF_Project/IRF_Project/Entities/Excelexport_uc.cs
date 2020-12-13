@@ -132,9 +132,9 @@ namespace IRF_Project
             
             string [] headers = new string[]
             {                
-                "Leltari szam",
-                "Tipus",
-                "MAC cim",
+                "Leltári szám",
+                "Típus",
+                "MAC cím",
                 "Beszerzés éve",
                 "Gyártó"
             };
@@ -159,7 +159,7 @@ namespace IRF_Project
 
             xlSheet.get_Range(
             GetCell(2, 1),
-            GetCell(1 + values.GetLength(0), values.GetLength(1))).Value2 = values;
+            GetCell(1 + values.GetLength(0), values.GetLength(1))).Value2 = values;           
 
             Excel.Range headerRange = xlSheet.get_Range(GetCell(1, 1), GetCell(1, headers.Length));
             Excel.Range dataRange = xlSheet.get_Range(GetCell(2, 1), GetCell(counter + 2,headers.Length));

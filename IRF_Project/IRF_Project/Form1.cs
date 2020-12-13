@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IRF_Project.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,7 +26,7 @@ namespace IRF_Project
         private void főoldalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
-            Excel_uc uc = new Excel_uc();
+            Fooldal_uc uc = new Fooldal_uc();
             this.Text = "Főoldal";
             panel1.Controls.Add(uc);
         }
@@ -43,6 +44,14 @@ namespace IRF_Project
             Excel_uc uc = new Excel_uc();
             panel1.Controls.Clear();
             this.Text = "Excel Export";
+            panel1.Controls.Add(uc);
+        }
+
+        private void hELPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Help_uc uc = new Help_uc();
+            panel1.Controls.Clear();
+            this.Text = "HELP";
             panel1.Controls.Add(uc);
         }
     }
