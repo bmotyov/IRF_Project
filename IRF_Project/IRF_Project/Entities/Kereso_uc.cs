@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
+using IRF_Project.Entities;
 
 namespace IRF_Project
 {
@@ -26,10 +27,14 @@ namespace IRF_Project
         }
 
         private void Listbox_feltoltes()
-        {    
-            List<string> gyarto = new List<string>() {"HP", "Dell", "Cisco", "Lenovo" };
+        {
+            //enumeráció első használata
+            List<string> gyarto = new List<string>();
+            for (int i = 1; i < 5; i++)
+            {
+                gyarto.Add(((GyartoEnum)i).ToString());
+            }
             listBox_gyarto.DataSource = gyarto.ToList();           
-
         }
 
         private void txtbox_szuresek()

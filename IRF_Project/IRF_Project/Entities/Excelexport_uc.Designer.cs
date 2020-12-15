@@ -42,6 +42,7 @@
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.leltariszamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mACDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +58,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(608, 13);
             this.label2.Name = "label2";
@@ -85,6 +87,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label4.Location = new System.Drawing.Point(608, 177);
             this.label4.Name = "label4";
@@ -106,7 +109,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(10, 6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(540, 288);
+            this.dataGridView1.Size = new System.Drawing.Size(529, 288);
             this.dataGridView1.TabIndex = 30;
             // 
             // numericUpDown2
@@ -130,6 +133,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Location = new System.Drawing.Point(611, 42);
@@ -137,11 +141,12 @@
             this.checkBox1.Size = new System.Drawing.Size(40, 17);
             this.checkBox1.TabIndex = 43;
             this.checkBox1.Text = "PC";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.UseVisualStyleBackColor = false;
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
+            this.checkBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.checkBox2.Checked = true;
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox2.Location = new System.Drawing.Point(611, 69);
@@ -149,11 +154,12 @@
             this.checkBox2.Size = new System.Drawing.Size(75, 17);
             this.checkBox2.TabIndex = 44;
             this.checkBox2.Text = "IP Telefon";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.UseVisualStyleBackColor = false;
             // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
+            this.checkBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.checkBox3.Checked = true;
             this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox3.Location = new System.Drawing.Point(611, 94);
@@ -161,11 +167,12 @@
             this.checkBox3.Size = new System.Drawing.Size(58, 17);
             this.checkBox3.TabIndex = 45;
             this.checkBox3.Text = "Switch";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.UseVisualStyleBackColor = false;
             // 
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
+            this.checkBox4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.checkBox4.Checked = true;
             this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox4.Location = new System.Drawing.Point(611, 120);
@@ -173,11 +180,12 @@
             this.checkBox4.Size = new System.Drawing.Size(58, 17);
             this.checkBox4.TabIndex = 46;
             this.checkBox4.Text = "Router";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label1.Location = new System.Drawing.Point(643, 200);
             this.label1.Name = "label1";
@@ -188,6 +196,7 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
+            this.checkBox5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.checkBox5.Checked = true;
             this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox5.Location = new System.Drawing.Point(611, 149);
@@ -195,7 +204,7 @@
             this.checkBox5.Size = new System.Drawing.Size(61, 17);
             this.checkBox5.TabIndex = 48;
             this.checkBox5.Text = "Monitor";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -219,6 +228,15 @@
             this.button2.Text = "EXPORT!";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(545, 6);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(202, 288);
+            this.panel1.TabIndex = 51;
             // 
             // leltariszamDataGridViewTextBoxColumn
             // 
@@ -271,6 +289,7 @@
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panel1);
             this.Name = "Excel_uc";
             this.Size = new System.Drawing.Size(750, 300);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -303,5 +322,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mACDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn beszeveDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn gyartoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panel1;
     }
 }

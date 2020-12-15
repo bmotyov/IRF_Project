@@ -13,4 +13,5 @@ namespace IRF_Project.Entities
         Cisco = 3,
         Lenovo = 4
     }
+    
 }

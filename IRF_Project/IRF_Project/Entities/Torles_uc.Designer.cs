@@ -34,17 +34,27 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.eszkozokBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gyartoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mACDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Besz_eve = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.leltariszamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.leltariszamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mACDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gyartoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eszkozokBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eszkozokBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eszkozokBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button_delete
@@ -95,6 +105,15 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.numericUpDown1);
+            this.panel2.Controls.Add(this.checkBox3);
+            this.panel2.Controls.Add(this.checkBox2);
+            this.panel2.Controls.Add(this.checkBox1);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.listBox2);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.listBox1);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(465, 73);
@@ -102,45 +121,114 @@
             this.panel2.Size = new System.Drawing.Size(282, 224);
             this.panel2.TabIndex = 5;
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(109, 103);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            3000,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(56, 20);
+            this.numericUpDown1.TabIndex = 11;
+            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            2020,
+            0,
+            0,
+            0});
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(144, 83);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(15, 14);
+            this.checkBox3.TabIndex = 10;
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(239, 45);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox2.TabIndex = 9;
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(65, 45);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.TabIndex = 8;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label5.Location = new System.Drawing.Point(115, 83);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Év:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label4.Location = new System.Drawing.Point(196, 45);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Típus:";
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(186, 65);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(80, 108);
+            this.listBox2.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label3.Location = new System.Drawing.Point(23, 45);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Gyártó:";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(13, 65);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(83, 108);
+            this.listBox1.TabIndex = 4;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Red;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(91, 196);
+            this.button1.Location = new System.Drawing.Point(79, 187);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
+            this.button1.Size = new System.Drawing.Size(127, 23);
             this.button1.TabIndex = 3;
             this.button1.Text = "Törlés";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // eszkozokBindingSource
-            // 
-            this.eszkozokBindingSource.DataSource = typeof(IRF_Project.Eszkozok);
-            // 
-            // gyartoDataGridViewTextBoxColumn
-            // 
-            this.gyartoDataGridViewTextBoxColumn.DataPropertyName = "Gyarto";
-            this.gyartoDataGridViewTextBoxColumn.HeaderText = "Gyarto";
-            this.gyartoDataGridViewTextBoxColumn.Name = "gyartoDataGridViewTextBoxColumn";
-            // 
-            // mACDataGridViewTextBoxColumn
-            // 
-            this.mACDataGridViewTextBoxColumn.DataPropertyName = "MAC";
-            this.mACDataGridViewTextBoxColumn.HeaderText = "MAC";
-            this.mACDataGridViewTextBoxColumn.Name = "mACDataGridViewTextBoxColumn";
             // 
             // Besz_eve
             // 
             this.Besz_eve.DataPropertyName = "Besz_eve";
             this.Besz_eve.HeaderText = "Besz_eve";
             this.Besz_eve.Name = "Besz_eve";
-            // 
-            // leltariszamDataGridViewTextBoxColumn
-            // 
-            this.leltariszamDataGridViewTextBoxColumn.DataPropertyName = "Leltari_szam";
-            this.leltariszamDataGridViewTextBoxColumn.HeaderText = "Leltari_szam";
-            this.leltariszamDataGridViewTextBoxColumn.Name = "leltariszamDataGridViewTextBoxColumn";
             // 
             // dataGridView1
             // 
@@ -158,6 +246,28 @@
             this.dataGridView1.Size = new System.Drawing.Size(452, 294);
             this.dataGridView1.TabIndex = 0;
             // 
+            // leltariszamDataGridViewTextBoxColumn
+            // 
+            this.leltariszamDataGridViewTextBoxColumn.DataPropertyName = "Leltari_szam";
+            this.leltariszamDataGridViewTextBoxColumn.HeaderText = "Leltari_szam";
+            this.leltariszamDataGridViewTextBoxColumn.Name = "leltariszamDataGridViewTextBoxColumn";
+            // 
+            // mACDataGridViewTextBoxColumn
+            // 
+            this.mACDataGridViewTextBoxColumn.DataPropertyName = "MAC";
+            this.mACDataGridViewTextBoxColumn.HeaderText = "MAC";
+            this.mACDataGridViewTextBoxColumn.Name = "mACDataGridViewTextBoxColumn";
+            // 
+            // gyartoDataGridViewTextBoxColumn
+            // 
+            this.gyartoDataGridViewTextBoxColumn.DataPropertyName = "Gyarto";
+            this.gyartoDataGridViewTextBoxColumn.HeaderText = "Gyarto";
+            this.gyartoDataGridViewTextBoxColumn.Name = "gyartoDataGridViewTextBoxColumn";
+            // 
+            // eszkozokBindingSource
+            // 
+            this.eszkozokBindingSource.DataSource = typeof(IRF_Project.Eszkozok);
+            // 
             // Torles_uc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,8 +281,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eszkozokBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eszkozokBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -190,5 +301,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Besz_eve;
         private System.Windows.Forms.DataGridViewTextBoxColumn leltariszamDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
