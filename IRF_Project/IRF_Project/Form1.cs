@@ -54,5 +54,13 @@ namespace IRF_Project
             this.Text = "HELP";
             panel1.Controls.Add(uc);
         }
+
+        private void szerkesztőFelületToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Torles_uc uc = new Torles_uc();
+            panel1.Controls.Clear();
+            this.Text = "Emelek Törlése";
+            panel1.Controls.Add(uc);
+        }
     }
 }

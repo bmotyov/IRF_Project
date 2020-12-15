@@ -42,12 +42,12 @@
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.eszkozokBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.leltariszamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mACDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.beszeveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gyartoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eszkozokBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -199,6 +199,7 @@
             // 
             // button1
             // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Location = new System.Drawing.Point(566, 233);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(165, 23);
@@ -210,6 +211,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Info;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Location = new System.Drawing.Point(567, 262);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(164, 23);
@@ -217,10 +219,6 @@
             this.button2.Text = "EXPORT!";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // eszkozokBindingSource
-            // 
-            this.eszkozokBindingSource.DataSource = typeof(IRF_Project.Eszkozok);
             // 
             // leltariszamDataGridViewTextBoxColumn
             // 
@@ -251,6 +249,10 @@
             this.gyartoDataGridViewTextBoxColumn.DataPropertyName = "Gyarto";
             this.gyartoDataGridViewTextBoxColumn.HeaderText = "Gyarto";
             this.gyartoDataGridViewTextBoxColumn.Name = "gyartoDataGridViewTextBoxColumn";
+            // 
+            // eszkozokBindingSource
+            // 
+            this.eszkozokBindingSource.DataSource = typeof(IRF_Project.Eszkozok);
             // 
             // Excel_uc
             // 

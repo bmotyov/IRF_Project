@@ -34,8 +34,6 @@
             this.főoldalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.keresőToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.szerkesztőFelületToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.leltárElemekKivezetéseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.leltárElemekHozzáadásaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.excelExportálásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hELPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -73,21 +71,9 @@
             // 
             // szerkesztőFelületToolStripMenuItem
             // 
-            this.szerkesztőFelületToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.leltárElemekKivezetéseToolStripMenuItem,
-            this.leltárElemekHozzáadásaToolStripMenuItem});
             this.szerkesztőFelületToolStripMenuItem.Name = "szerkesztőFelületToolStripMenuItem";
             resources.ApplyResources(this.szerkesztőFelületToolStripMenuItem, "szerkesztőFelületToolStripMenuItem");
-            // 
-            // leltárElemekKivezetéseToolStripMenuItem
-            // 
-            this.leltárElemekKivezetéseToolStripMenuItem.Name = "leltárElemekKivezetéseToolStripMenuItem";
-            resources.ApplyResources(this.leltárElemekKivezetéseToolStripMenuItem, "leltárElemekKivezetéseToolStripMenuItem");
-            // 
-            // leltárElemekHozzáadásaToolStripMenuItem
-            // 
-            this.leltárElemekHozzáadásaToolStripMenuItem.Name = "leltárElemekHozzáadásaToolStripMenuItem";
-            resources.ApplyResources(this.leltárElemekHozzáadásaToolStripMenuItem, "leltárElemekHozzáadásaToolStripMenuItem");
+            this.szerkesztőFelületToolStripMenuItem.Click += new System.EventHandler(this.szerkesztőFelületToolStripMenuItem_Click);
             // 
             // excelExportálásToolStripMenuItem
             // 
@@ -136,8 +122,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem főoldalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem szerkesztőFelületToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem leltárElemekKivezetéseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem leltárElemekHozzáadásaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem excelExportálásToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hELPToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;

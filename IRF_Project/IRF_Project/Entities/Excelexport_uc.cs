@@ -17,7 +17,8 @@ namespace IRF_Project
     {
         LeltarEntities context = new LeltarEntities();
         List<Eszkozok> Eszkozok;
-        List<Valogatott> Valogatott = new List<Valogatott>();        
+        List<Valogatott> Valogatott = new List<Valogatott>();
+        bool vane = false;
 
         //Exceles rész kezdete
         Excel.Application xlApp; // A Microsoft Excel alkalmazás
@@ -39,6 +40,8 @@ namespace IRF_Project
         {            
             List<string> elemek = Nemtudomhogyankellszebben(checkBox1.Checked, checkBox2.Checked, checkBox3.Checked, checkBox4.Checked, checkBox5.Checked);
             Valogatott.Clear(); //töröljük a lista tartalmát, lehet van beragadt dolog
+
+            vane = true;
               
             foreach (var esz in Eszkozok)
             {
@@ -96,6 +99,12 @@ namespace IRF_Project
 
         private void CreateExcel()
         {
+            if (vane == false)
+            {
+                MessageBox.Show("Előbb hozd létre az elől nézetet! Anélkül nem tud Excel készülni.","Export hiba");
+                return;                
+            }
+
             try
             {
                 // Excel elindítása és az applikáció objektum betöltése

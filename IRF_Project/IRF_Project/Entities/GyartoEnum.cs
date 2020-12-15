@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace IRF_Project.Entities
 {
-    public enum TipsuokEnum
+    public enum GyartoEnum
     {
-
+        HP = 1,
+        Dell = 2,
+        Cisco = 3,
+        Lenovo = 4
     }
 }

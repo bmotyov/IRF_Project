@@ -36,22 +36,22 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.listBox_gyarto = new System.Windows.Forms.ListBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.txtbox_eszkoz = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.leltariszamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mACDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.beszeveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gyartoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eszkozokBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.listBox_gyarto = new System.Windows.Forms.ListBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.txtbox_eszkoz = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.leltarEntitiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eszkozokBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leltarEntitiesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,6 +128,40 @@
             this.dataGridView1.Size = new System.Drawing.Size(540, 288);
             this.dataGridView1.TabIndex = 13;
             // 
+            // leltariszamDataGridViewTextBoxColumn
+            // 
+            this.leltariszamDataGridViewTextBoxColumn.DataPropertyName = "Leltari_szam";
+            this.leltariszamDataGridViewTextBoxColumn.HeaderText = "Leltári szám";
+            this.leltariszamDataGridViewTextBoxColumn.Name = "leltariszamDataGridViewTextBoxColumn";
+            // 
+            // tipusDataGridViewTextBoxColumn
+            // 
+            this.tipusDataGridViewTextBoxColumn.DataPropertyName = "Tipus";
+            this.tipusDataGridViewTextBoxColumn.HeaderText = "Típus";
+            this.tipusDataGridViewTextBoxColumn.Name = "tipusDataGridViewTextBoxColumn";
+            // 
+            // mACDataGridViewTextBoxColumn
+            // 
+            this.mACDataGridViewTextBoxColumn.DataPropertyName = "MAC";
+            this.mACDataGridViewTextBoxColumn.HeaderText = "MAC";
+            this.mACDataGridViewTextBoxColumn.Name = "mACDataGridViewTextBoxColumn";
+            // 
+            // beszeveDataGridViewTextBoxColumn
+            // 
+            this.beszeveDataGridViewTextBoxColumn.DataPropertyName = "Besz_eve";
+            this.beszeveDataGridViewTextBoxColumn.HeaderText = "Beszerzés éve";
+            this.beszeveDataGridViewTextBoxColumn.Name = "beszeveDataGridViewTextBoxColumn";
+            // 
+            // gyartoDataGridViewTextBoxColumn
+            // 
+            this.gyartoDataGridViewTextBoxColumn.DataPropertyName = "Gyarto";
+            this.gyartoDataGridViewTextBoxColumn.HeaderText = "Gyártó";
+            this.gyartoDataGridViewTextBoxColumn.Name = "gyartoDataGridViewTextBoxColumn";
+            // 
+            // eszkozokBindingSource
+            // 
+            this.eszkozokBindingSource.DataSource = typeof(IRF_Project.Eszkozok);
+            // 
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(575, 274);
@@ -196,40 +230,6 @@
             this.label2.TabIndex = 28;
             this.label2.Text = "Eszköz típusa:";
             // 
-            // leltariszamDataGridViewTextBoxColumn
-            // 
-            this.leltariszamDataGridViewTextBoxColumn.DataPropertyName = "Leltari_szam";
-            this.leltariszamDataGridViewTextBoxColumn.HeaderText = "Leltári szám";
-            this.leltariszamDataGridViewTextBoxColumn.Name = "leltariszamDataGridViewTextBoxColumn";
-            // 
-            // tipusDataGridViewTextBoxColumn
-            // 
-            this.tipusDataGridViewTextBoxColumn.DataPropertyName = "Tipus";
-            this.tipusDataGridViewTextBoxColumn.HeaderText = "Típus";
-            this.tipusDataGridViewTextBoxColumn.Name = "tipusDataGridViewTextBoxColumn";
-            // 
-            // mACDataGridViewTextBoxColumn
-            // 
-            this.mACDataGridViewTextBoxColumn.DataPropertyName = "MAC";
-            this.mACDataGridViewTextBoxColumn.HeaderText = "MAC";
-            this.mACDataGridViewTextBoxColumn.Name = "mACDataGridViewTextBoxColumn";
-            // 
-            // beszeveDataGridViewTextBoxColumn
-            // 
-            this.beszeveDataGridViewTextBoxColumn.DataPropertyName = "Besz_eve";
-            this.beszeveDataGridViewTextBoxColumn.HeaderText = "Beszerzés éve";
-            this.beszeveDataGridViewTextBoxColumn.Name = "beszeveDataGridViewTextBoxColumn";
-            // 
-            // gyartoDataGridViewTextBoxColumn
-            // 
-            this.gyartoDataGridViewTextBoxColumn.DataPropertyName = "Gyarto";
-            this.gyartoDataGridViewTextBoxColumn.HeaderText = "Gyártó";
-            this.gyartoDataGridViewTextBoxColumn.Name = "gyartoDataGridViewTextBoxColumn";
-            // 
-            // eszkozokBindingSource
-            // 
-            this.eszkozokBindingSource.DataSource = typeof(IRF_Project.Eszkozok);
-            // 
             // leltarEntitiesBindingSource
             // 
             this.leltarEntitiesBindingSource.DataSource = typeof(IRF_Project.LeltarEntities);
@@ -255,8 +255,8 @@
             this.Name = "kereso_uc";
             this.Size = new System.Drawing.Size(750, 300);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eszkozokBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leltarEntitiesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
