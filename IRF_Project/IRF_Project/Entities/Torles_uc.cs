@@ -60,7 +60,7 @@ namespace IRF_Project.Entities
         private void button1_Click(object sender, EventArgs e)
         {                      
             
-            MessageBox.Show(temp.Count().ToString());
+            //MessageBox.Show(temp.Count().ToString());
             //Konkrét törlés
 
             Form_kerdes f2 = new Form_kerdes();
