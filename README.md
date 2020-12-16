@@ -1,5 +1,5 @@
 # IRF Project - Leltározó alkalmazás létrehozása
-Év végi beadandó project feladat
+Év végi beadandó project feladat - Egy kisvállalkoás leltári alkalmazásának megvalósítása
 
 Megvalósítandó dolgok: 
 * B -  Adatbázis létrehozása, kapcsolódás és legalább egy tábla adatainak beolvasása
