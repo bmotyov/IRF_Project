@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace IRF_Project.Entities
 {
@@ -19,17 +20,17 @@ namespace IRF_Project.Entities
 
         private void keresőToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pictureBox1.Load("Help_kereso.PNG");
+            pictureBox1.Load(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, @"..\..\lib\Help_kereso.PNG")));
         }
 
         private void szerkesztőiFelületToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pictureBox1.Load("Help_szerkesztoi.PNG");
+            pictureBox1.Load(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, @"..\..\lib\Help_szerkesztoi.PNG")));
         }
 
         private void excelExportálásToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pictureBox1.Load("Help_excel.PNG");
+            pictureBox1.Load(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, @"..\..\lib\Help_excel.PNG")));
         }
     }
 }

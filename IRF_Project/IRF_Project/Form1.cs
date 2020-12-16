@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -72,7 +73,7 @@ namespace IRF_Project
             fooldal.Width = 750;
             fooldal.Top = 20;
 
-            fooldal.Load("Kezdolap.PNG");
+            fooldal.Load(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, @"..\..\lib\Kezdolap.PNG")));
         }
 
     }
