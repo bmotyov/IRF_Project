@@ -20,15 +20,15 @@ namespace IRF_Project
             InitializeComponent();
             MinimizeBox = true;
             MaximizeBox = false;
-        }
+            FormBorderStyle = FormBorderStyle.FixedDialog;
 
-        
+            kezdolap();
+        }
+           
+
         private void főoldalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            panel1.Controls.Clear();
-            Fooldal_uc uc = new Fooldal_uc();
-            this.Text = "Főoldal";
-            panel1.Controls.Add(uc);
+            kezdolap();
         }
 
         private void keresőToolStripMenuItem_Click(object sender, EventArgs e)
@@ -62,5 +62,18 @@ namespace IRF_Project
             this.Text = "Emelek Törlése";
             panel1.Controls.Add(uc);
         }
+
+        private void kezdolap()
+        {
+            panel1.Controls.Clear();
+            PictureBox fooldal = new PictureBox();
+            panel1.Controls.Add(fooldal);
+            fooldal.Height = 300;
+            fooldal.Width = 750;
+            fooldal.Top = 20;
+
+            fooldal.Load("Kezdolap.PNG");
+        }
+
     }
 }

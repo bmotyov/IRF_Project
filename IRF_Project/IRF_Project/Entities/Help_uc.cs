@@ -24,7 +24,7 @@ namespace IRF_Project.Entities
 
         private void szerkesztőiFelületToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pictureBox1.Load("Help_kereso.PNG");
+            pictureBox1.Load("Help_szerkesztoi.PNG");
         }
 
         private void excelExportálásToolStripMenuItem_Click(object sender, EventArgs e)

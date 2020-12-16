@@ -211,6 +211,8 @@
     <Content Include="lib\Help_kereso.PNG">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="lib\Help_szerkesztoi.png" />
+    <Content Include="lib\Kezdolap.PNG" />
     <Content Include="lib\note_pen_icon_173010.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -15,6 +15,9 @@ namespace IRF_Project.Entities
         public Form_kerdes()
         {
             InitializeComponent();
+            MinimizeBox = true;
+            MaximizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedDialog;
         }
     }
 }

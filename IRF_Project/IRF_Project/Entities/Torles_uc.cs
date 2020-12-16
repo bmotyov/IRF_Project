@@ -39,7 +39,8 @@ namespace IRF_Project.Entities
         private void Betolt()
         {
             Eszkozok = context.Eszkozoks.ToList();
-            eszkozokBindingSource.DataSource = Eszkozok.ToList();           
+            eszkozokBindingSource.DataSource = Eszkozok.ToList();
+            dataGridView1.DataSource = Eszkozok.ToList();
         }
 
         private void button_delete_Click(object sender, EventArgs e)
@@ -58,13 +59,19 @@ namespace IRF_Project.Entities
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {                      
-            
+        {
+
             //MessageBox.Show(temp.Count().ToString());
             //Konkrét törlés
+            if (temp.Count == 0)
+            {
+                MessageBox.Show("Nem lehetséges 0 elem törlése. (Nyomj a megjelnít gombra!)");
+                return;
+            }
 
             Form_kerdes f2 = new Form_kerdes();
             f2.label1.Text = "Biztosan végleg törölni szeretnél " + temp.Count().ToString() + " elemet a listából?";
+            f2.StartPosition = FormStartPosition.CenterParent;
 
             if (f2.ShowDialog() == DialogResult.OK)
             {
@@ -77,7 +84,8 @@ namespace IRF_Project.Entities
 
                     context.Eszkozoks.Remove(torlendo);
                 }
-               
+
+                temp.Clear();
                 context.SaveChanges();
                 Betolt();
                 dataGridView1.DataSource = Eszkozok.ToList();
@@ -158,8 +166,14 @@ namespace IRF_Project.Entities
                         listabane = true;
                     }
                 }
-            }
+            }            
             dataGridView1.DataSource = temp.ToList();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Eszkozok = context.Eszkozoks.ToList();
+            dataGridView1.DataSource = Eszkozok.ToList();           
         }
     }
 }
