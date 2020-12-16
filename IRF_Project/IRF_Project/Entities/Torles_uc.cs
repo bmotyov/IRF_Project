@@ -14,6 +14,7 @@ namespace IRF_Project.Entities
     {
         LeltarEntities context = new LeltarEntities();
         List<Eszkozok> Eszkozok;
+        List<IdeiglenesKuka> temp = new List<IdeiglenesKuka>();
 
         public Torles_uc()
         {
@@ -31,23 +32,14 @@ namespace IRF_Project.Entities
             }
             listBox1.DataSource = Gyartok.ToList();
 
-            listBox2.DisplayMember = "Tipus";
-            var tipusok = from x in context.Eszkozoks
-                          group x by x.Tipus into g
-                          select new
-                          {
-                              Tipus = g.Key
-                          };
-            listBox2.DataSource = tipusok.ToList();
-            
+            List<string> Tipsuok = new List<string>() { "PC", "IP telefon", "Switch", "Router", "Monitor", "Teszt" };
+            listBox2.DataSource = Tipsuok.ToList();            
         }
 
         private void Betolt()
         {
             Eszkozok = context.Eszkozoks.ToList();
-            eszkozokBindingSource.DataSource = Eszkozok.ToList();
-
-            Eszkozok = context.Eszkozoks.ToList();
+            eszkozokBindingSource.DataSource = Eszkozok.ToList();           
         }
 
         private void button_delete_Click(object sender, EventArgs e)
@@ -63,6 +55,111 @@ namespace IRF_Project.Entities
             context.SaveChanges();
             Betolt();
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {                      
+            
+            MessageBox.Show(temp.Count().ToString());
+            //Konkrét törlés
+
+            Form_kerdes f2 = new Form_kerdes();
+            f2.label1.Text = "Biztosan végleg törölni szeretnél " + temp.Count().ToString() + " elemet a listából?";
+
+            if (f2.ShowDialog() == DialogResult.OK)
+            {
+                for (int j = 0; j < temp.Count; j++)
+                {
+                    int sszam = temp[j].Sorszam;
+                    var torlendo = (from x in context.Eszkozoks
+                                    where x.Sorszam == sszam
+                                    select x).FirstOrDefault();
+
+                    context.Eszkozoks.Remove(torlendo);
+                }
+               
+                context.SaveChanges();
+                Betolt();
+                dataGridView1.DataSource = Eszkozok.ToList();
+            }
+            else
+            {
+                MessageBox.Show("Nem történt módosítás.");
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            bool listabane = false;
+            temp.Clear(); // minden gombnyomás előtt törlöm a temp teljes tartalmét
+
+            //törlendők listájának feltöltése
+            for (int i = 0; i < Eszkozok.Count; i++)
+            {
+                listabane = false;
+                if (checkBox1.Checked == true)
+                {
+                    if (Eszkozok[i].Gyarto.Contains(listBox1.SelectedItem.ToString()))
+                    {
+                        IdeiglenesKuka aktualis = new IdeiglenesKuka();
+                        aktualis.Leltari = Eszkozok[i].Leltari_szam;
+                        aktualis.Gyarto = (GyartoEnum)Enum.Parse(typeof(GyartoEnum), Eszkozok[i].Gyarto);
+                        aktualis.Sorszam = Eszkozok[i].Sorszam;
+                        aktualis.Besz_eve = Eszkozok[i].Besz_eve;
+
+                        temp.Add(aktualis);
+                        listabane = true;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+                if (checkBox2.Checked == true)
+                {
+                    if (listabane == true && !Eszkozok[i].Tipus.Contains(listBox2.SelectedItem.ToString()))
+                    {
+                        temp.Remove(temp[temp.Count() - 1]);
+                        continue;
+                    }
+                    else if (listabane == false && Eszkozok[i].Tipus.Contains(listBox2.SelectedItem.ToString()))
+                    {
+                        IdeiglenesKuka aktualis = new IdeiglenesKuka();
+                        aktualis.Leltari = Eszkozok[i].Leltari_szam;
+                        aktualis.Gyarto = (GyartoEnum)Enum.Parse(typeof(GyartoEnum), Eszkozok[i].Gyarto);
+                        aktualis.Sorszam = Eszkozok[i].Sorszam;
+                        aktualis.Besz_eve = Eszkozok[i].Besz_eve;
+
+                        temp.Add(aktualis);
+                        listabane = true;
+                    }
+                    if (listabane == false && !Eszkozok[i].Tipus.Contains(listBox2.SelectedItem.ToString()))
+                    {
+                        continue;
+                    }
+
+                }
+                if (checkBox3.Checked)
+                {
+                    if (listabane == true && numericUpDown1.Value != Eszkozok[i].Besz_eve)
+                    {
+                        temp.Remove(temp[temp.Count() - 1]);
+                    }
+                    else if (listabane == false && numericUpDown1.Value == Eszkozok[i].Besz_eve)
+                    {
+                        IdeiglenesKuka aktualis = new IdeiglenesKuka();
+                        aktualis.Leltari = Eszkozok[i].Leltari_szam;
+                        aktualis.Gyarto = (GyartoEnum)Enum.Parse(typeof(GyartoEnum), Eszkozok[i].Gyarto);
+                        aktualis.Sorszam = Eszkozok[i].Sorszam;
+                        aktualis.Besz_eve = Eszkozok[i].Besz_eve;
+
+                        temp.Add(aktualis);
+                        listabane = true;
+                    }
+                }
+            }
+            dataGridView1.DataSource = temp.ToList();
         }
     }
 }

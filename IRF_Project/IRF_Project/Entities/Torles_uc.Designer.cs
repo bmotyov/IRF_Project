@@ -44,16 +44,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.Besz_eve = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.leltariszamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mACDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sorszamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.leltariDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gyartoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.beszeveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ideiglenesKukaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eszkozokBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ideiglenesKukaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eszkozokBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,7 +99,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button_delete);
-            this.panel1.Location = new System.Drawing.Point(465, 3);
+            this.panel1.Location = new System.Drawing.Point(459, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(282, 47);
             this.panel1.TabIndex = 4;
@@ -105,6 +108,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.numericUpDown1);
             this.panel2.Controls.Add(this.checkBox3);
             this.panel2.Controls.Add(this.checkBox2);
@@ -116,7 +120,7 @@
             this.panel2.Controls.Add(this.listBox1);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(465, 73);
+            this.panel2.Location = new System.Drawing.Point(459, 73);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(282, 224);
             this.panel2.TabIndex = 5;
@@ -217,52 +221,70 @@
             this.button1.BackColor = System.Drawing.Color.Red;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(79, 187);
+            this.button1.Location = new System.Drawing.Point(147, 191);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 23);
             this.button1.TabIndex = 3;
             this.button1.Text = "Törlés";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Besz_eve
+            // button2
             // 
-            this.Besz_eve.DataPropertyName = "Besz_eve";
-            this.Besz_eve.HeaderText = "Besz_eve";
-            this.Besz_eve.Name = "Besz_eve";
+            this.button2.BackColor = System.Drawing.Color.Gray;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(6, 191);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 23);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Mutasd";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.leltariszamDataGridViewTextBoxColumn,
-            this.Besz_eve,
-            this.mACDataGridViewTextBoxColumn,
-            this.gyartoDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.eszkozokBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.sorszamDataGridViewTextBoxColumn,
+            this.leltariDataGridViewTextBoxColumn,
+            this.gyartoDataGridViewTextBoxColumn,
+            this.beszeveDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.ideiglenesKukaBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(9, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(452, 294);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Size = new System.Drawing.Size(438, 293);
+            this.dataGridView1.TabIndex = 6;
             // 
-            // leltariszamDataGridViewTextBoxColumn
+            // sorszamDataGridViewTextBoxColumn
             // 
-            this.leltariszamDataGridViewTextBoxColumn.DataPropertyName = "Leltari_szam";
-            this.leltariszamDataGridViewTextBoxColumn.HeaderText = "Leltari_szam";
-            this.leltariszamDataGridViewTextBoxColumn.Name = "leltariszamDataGridViewTextBoxColumn";
+            this.sorszamDataGridViewTextBoxColumn.DataPropertyName = "Sorszam";
+            this.sorszamDataGridViewTextBoxColumn.HeaderText = "Sorszám";
+            this.sorszamDataGridViewTextBoxColumn.Name = "sorszamDataGridViewTextBoxColumn";
             // 
-            // mACDataGridViewTextBoxColumn
+            // leltariDataGridViewTextBoxColumn
             // 
-            this.mACDataGridViewTextBoxColumn.DataPropertyName = "MAC";
-            this.mACDataGridViewTextBoxColumn.HeaderText = "MAC";
-            this.mACDataGridViewTextBoxColumn.Name = "mACDataGridViewTextBoxColumn";
+            this.leltariDataGridViewTextBoxColumn.DataPropertyName = "Leltari";
+            this.leltariDataGridViewTextBoxColumn.HeaderText = "Leltári szám";
+            this.leltariDataGridViewTextBoxColumn.Name = "leltariDataGridViewTextBoxColumn";
             // 
             // gyartoDataGridViewTextBoxColumn
             // 
             this.gyartoDataGridViewTextBoxColumn.DataPropertyName = "Gyarto";
-            this.gyartoDataGridViewTextBoxColumn.HeaderText = "Gyarto";
+            this.gyartoDataGridViewTextBoxColumn.HeaderText = "Gyártó";
             this.gyartoDataGridViewTextBoxColumn.Name = "gyartoDataGridViewTextBoxColumn";
+            // 
+            // beszeveDataGridViewTextBoxColumn
+            // 
+            this.beszeveDataGridViewTextBoxColumn.DataPropertyName = "Besz_eve";
+            this.beszeveDataGridViewTextBoxColumn.HeaderText = "Beszerzés Éve";
+            this.beszeveDataGridViewTextBoxColumn.Name = "beszeveDataGridViewTextBoxColumn";
+            // 
+            // ideiglenesKukaBindingSource
+            // 
+            this.ideiglenesKukaBindingSource.DataSource = typeof(IRF_Project.Entities.IdeiglenesKuka);
             // 
             // eszkozokBindingSource
             // 
@@ -283,6 +305,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ideiglenesKukaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eszkozokBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -296,11 +319,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gyartoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mACDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Besz_eve;
-        private System.Windows.Forms.DataGridViewTextBoxColumn leltariszamDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListBox listBox2;
@@ -310,5 +328,12 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sorszamDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn leltariDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gyartoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn beszeveDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource ideiglenesKukaBindingSource;
     }
 }

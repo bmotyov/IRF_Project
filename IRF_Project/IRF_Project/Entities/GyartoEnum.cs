@@ -11,7 +11,8 @@ namespace IRF_Project.Entities
         HP = 1,
         Dell = 2,
         Cisco = 3,
-        Lenovo = 4
+        Lenovo = 4,
+        Teszt = 5
     }
     
 }
