@@ -9,12 +9,12 @@ Megvalósítandó dolgok:
 
 Elemei:
 * Keresés sheet
- * Bizonyos tulajdonságok alapján lehet benne kereséseket létrehozni
+  * Bizonyos tulajdonságok alapján lehet benne kereséseket létrehozni
 * Excel export összekészítése egy háttéradatbázist felhasználva
   * Adott szűrési feltételek segítségével lehet összeállítani egy listát, amit később ki lehet exportálni
 * Szerkesztői felület
- * Adott tulajdonságok alapján elemek törlése a listából és egy háttéradatbázisból
+  * Adott tulajdonságok alapján elemek törlése a listából és egy háttéradatbázisból
 * HELP
- * Kis útmutatás a felhasználók számára
+  * Kis útmutatás a felhasználók számára
 
 
