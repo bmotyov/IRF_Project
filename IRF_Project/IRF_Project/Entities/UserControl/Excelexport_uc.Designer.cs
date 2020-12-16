@@ -33,6 +33,12 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.leltariszamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mACDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.beszeveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gyartoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eszkozokBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -43,16 +49,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.leltariszamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mACDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.beszeveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gyartoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eszkozokBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eszkozokBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -97,6 +97,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -108,9 +110,49 @@
             this.dataGridView1.DataSource = this.eszkozokBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(10, 6);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.Size = new System.Drawing.Size(529, 288);
             this.dataGridView1.TabIndex = 30;
+            // 
+            // leltariszamDataGridViewTextBoxColumn
+            // 
+            this.leltariszamDataGridViewTextBoxColumn.DataPropertyName = "Leltari_szam";
+            this.leltariszamDataGridViewTextBoxColumn.HeaderText = "Leltari_szam";
+            this.leltariszamDataGridViewTextBoxColumn.Name = "leltariszamDataGridViewTextBoxColumn";
+            this.leltariszamDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tipusDataGridViewTextBoxColumn
+            // 
+            this.tipusDataGridViewTextBoxColumn.DataPropertyName = "Tipus";
+            this.tipusDataGridViewTextBoxColumn.HeaderText = "Tipus";
+            this.tipusDataGridViewTextBoxColumn.Name = "tipusDataGridViewTextBoxColumn";
+            this.tipusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // mACDataGridViewTextBoxColumn
+            // 
+            this.mACDataGridViewTextBoxColumn.DataPropertyName = "MAC";
+            this.mACDataGridViewTextBoxColumn.HeaderText = "MAC";
+            this.mACDataGridViewTextBoxColumn.Name = "mACDataGridViewTextBoxColumn";
+            this.mACDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // beszeveDataGridViewTextBoxColumn
+            // 
+            this.beszeveDataGridViewTextBoxColumn.DataPropertyName = "Besz_eve";
+            this.beszeveDataGridViewTextBoxColumn.HeaderText = "Besz_eve";
+            this.beszeveDataGridViewTextBoxColumn.Name = "beszeveDataGridViewTextBoxColumn";
+            this.beszeveDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // gyartoDataGridViewTextBoxColumn
+            // 
+            this.gyartoDataGridViewTextBoxColumn.DataPropertyName = "Gyarto";
+            this.gyartoDataGridViewTextBoxColumn.HeaderText = "Gyarto";
+            this.gyartoDataGridViewTextBoxColumn.Name = "gyartoDataGridViewTextBoxColumn";
+            this.gyartoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // eszkozokBindingSource
+            // 
+            this.eszkozokBindingSource.DataSource = typeof(IRF_Project.Eszkozok);
             // 
             // numericUpDown2
             // 
@@ -238,40 +280,6 @@
             this.panel1.Size = new System.Drawing.Size(202, 288);
             this.panel1.TabIndex = 51;
             // 
-            // leltariszamDataGridViewTextBoxColumn
-            // 
-            this.leltariszamDataGridViewTextBoxColumn.DataPropertyName = "Leltari_szam";
-            this.leltariszamDataGridViewTextBoxColumn.HeaderText = "Leltari_szam";
-            this.leltariszamDataGridViewTextBoxColumn.Name = "leltariszamDataGridViewTextBoxColumn";
-            // 
-            // tipusDataGridViewTextBoxColumn
-            // 
-            this.tipusDataGridViewTextBoxColumn.DataPropertyName = "Tipus";
-            this.tipusDataGridViewTextBoxColumn.HeaderText = "Tipus";
-            this.tipusDataGridViewTextBoxColumn.Name = "tipusDataGridViewTextBoxColumn";
-            // 
-            // mACDataGridViewTextBoxColumn
-            // 
-            this.mACDataGridViewTextBoxColumn.DataPropertyName = "MAC";
-            this.mACDataGridViewTextBoxColumn.HeaderText = "MAC";
-            this.mACDataGridViewTextBoxColumn.Name = "mACDataGridViewTextBoxColumn";
-            // 
-            // beszeveDataGridViewTextBoxColumn
-            // 
-            this.beszeveDataGridViewTextBoxColumn.DataPropertyName = "Besz_eve";
-            this.beszeveDataGridViewTextBoxColumn.HeaderText = "Besz_eve";
-            this.beszeveDataGridViewTextBoxColumn.Name = "beszeveDataGridViewTextBoxColumn";
-            // 
-            // gyartoDataGridViewTextBoxColumn
-            // 
-            this.gyartoDataGridViewTextBoxColumn.DataPropertyName = "Gyarto";
-            this.gyartoDataGridViewTextBoxColumn.HeaderText = "Gyarto";
-            this.gyartoDataGridViewTextBoxColumn.Name = "gyartoDataGridViewTextBoxColumn";
-            // 
-            // eszkozokBindingSource
-            // 
-            this.eszkozokBindingSource.DataSource = typeof(IRF_Project.Eszkozok);
-            // 
             // Excel_uc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,8 +302,8 @@
             this.Size = new System.Drawing.Size(750, 300);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eszkozokBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
