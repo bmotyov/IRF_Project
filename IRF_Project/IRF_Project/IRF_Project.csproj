@@ -76,18 +76,18 @@
     <Compile Include="Entities\Form_kerdes.Designer.cs">
       <DependentUpon>Form_kerdes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Help_uc.cs">
+    <Compile Include="Entities\UserControl\Help_uc.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Entities\Help_uc.Designer.cs">
+    <Compile Include="Entities\UserControl\Help_uc.Designer.cs">
       <DependentUpon>Help_uc.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\GyartoEnum.cs" />
     <Compile Include="Entities\IdeiglenesKuka.cs" />
-    <Compile Include="Entities\Torles_uc.cs">
+    <Compile Include="Entities\UserControl\Torles_uc.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Entities\Torles_uc.Designer.cs">
+    <Compile Include="Entities\UserControl\Torles_uc.Designer.cs">
       <DependentUpon>Torles_uc.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\Valogatott.cs" />
@@ -117,31 +117,31 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Entities\Kereso_uc.cs">
+    <Compile Include="Entities\UserControl\Kereso_uc.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Entities\Kereso_uc.Designer.cs">
+    <Compile Include="Entities\UserControl\Kereso_uc.Designer.cs">
       <DependentUpon>Kereso_uc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Excelexport_uc.cs">
+    <Compile Include="Entities\UserControl\Excelexport_uc.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Entities\Excelexport_uc.Designer.cs">
+    <Compile Include="Entities\UserControl\Excelexport_uc.Designer.cs">
       <DependentUpon>Excelexport_uc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Fooldal_uc.cs">
+    <Compile Include="Entities\UserControl\Fooldal_uc.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Entities\Fooldal_uc.Designer.cs">
+    <Compile Include="Entities\UserControl\Fooldal_uc.Designer.cs">
       <DependentUpon>Fooldal_uc.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Entities\Form_kerdes.resx">
       <DependentUpon>Form_kerdes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Entities\Help_uc.resx">
+    <EmbeddedResource Include="Entities\UserControl\Help_uc.resx">
       <DependentUpon>Help_uc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Entities\Torles_uc.resx">
+    <EmbeddedResource Include="Entities\UserControl\Torles_uc.resx">
       <DependentUpon>Torles_uc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
@@ -156,13 +156,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Entities\Kereso_uc.resx">
+    <EmbeddedResource Include="Entities\UserControl\Kereso_uc.resx">
       <DependentUpon>Kereso_uc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Entities\Excelexport_uc.resx">
+    <EmbeddedResource Include="Entities\UserControl\Excelexport_uc.resx">
       <DependentUpon>Excelexport_uc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Entities\Fooldal_uc.resx">
+    <EmbeddedResource Include="Entities\UserControl\Fooldal_uc.resx">
       <DependentUpon>Fooldal_uc.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
