@@ -8,10 +8,13 @@ Megvalósítandó dolgok:
 * B -  Enumeráció létrehozása és használata
 
 Elemei:
-* Keresés sheet - bizonyos tulajdonságok alapján lehet benne kereséseket létrehozni
+* Keresés sheet
+ * Bizonyos tulajdonságok alapján lehet benne kereséseket létrehozni
 * Excel export összekészítése egy háttéradatbázist felhasználva
-  * csekk
-* Nem tudom mennyire lehetséges, de egy Excel alapján egy teljesenen új elemek felvitele.
-* Bizonyos elemek törlése v hozzáadása egy listához
+  * Adott szűrési feltételek segítségével lehet összeállítani egy listát, amit később ki lehet exportálni
+* Szerkesztői felület
+ * Adott tulajdonságok alapján elemek törlése a listából és egy háttéradatbázisból
+* HELP
+ * Kis útmutatás a felhasználók számára
 
 
