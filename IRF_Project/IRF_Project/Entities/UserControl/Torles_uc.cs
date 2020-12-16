@@ -32,7 +32,7 @@ namespace IRF_Project.Entities
             }
             listBox1.DataSource = Gyartok.ToList();
 
-            List<string> Tipsuok = new List<string>() { "PC", "IP telefon", "Switch", "Router", "Monitor", "Teszt" };
+            List<string> Tipsuok = new List<string>() { "PC", "IP telefon", "Switch", "Router", "Monitor"};
             listBox2.DataSource = Tipsuok.ToList();            
         }
 
